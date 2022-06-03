@@ -1,7 +1,8 @@
 #include <stdio.h>
 /**
- * main - main block
- * Retun: 0
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
