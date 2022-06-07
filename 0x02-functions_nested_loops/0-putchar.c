@@ -1,4 +1,4 @@
-#include <putchar.h>
+#include <main.h>
 
 /**
  * main - prints main, followed by a new line
@@ -6,13 +6,10 @@
  */
 int main(void)
 {
-	_putchar('P');
-	_putchar('u');
-	_putchar('t');
-	_putchar('c');
-	_putchar('h');
+	_putchar('M');
 	_putchar('a');
-	_putchar('r');
+	_putchar('i');
+	_putchar('n');
 
 	return (0);
 }
