@@ -36,5 +36,5 @@ char *cap_string(char *str)
 				trigger = 0;
 		}
 	}
-	return (strt);
+	return (str);
 }
