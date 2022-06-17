@@ -8,22 +8,17 @@
  */
 char *rot13(char *s)
 {
-	int i, j;
+	int i;
+	char storeh[] = "NOPQRSTUVWXYZABCDEFGHIJKLM";
+	char storel[] = "nopqrstuvwxyzabcdefghijklm";
 
-	char a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char b[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-
-	for (i = 0, s[i] != '\0'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (j = 0; a[j] != '\0'; j++)
+		if ((s[i] > 64 && s[i] < 91) || (s[i] > 96 && s[i] < 123))
 		{
-			if (s[i] == a[j])
-			{
-				s[i] = b[j];
-				break;
-			}
+			s[i] = (s[i] - 65 > 25) ?
+				storel[s[i] - 97] : storeh[s[i] - 65];
 		}
 	}
-
 	return (s);
 }
