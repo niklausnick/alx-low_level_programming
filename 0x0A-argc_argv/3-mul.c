@@ -1,25 +1,28 @@
 #include "main.h"
 #include <stdio.h>
-#include <stdlib.h>
 
 /**
- * main - multiply 2 numbers passed to main, or Error
- * @argc: argument count
- * @argv: argument vector
- * Return: 1 if error, 0 if function runs correctly
+ * main - multiplies two numbers
+ * @argc: number of arguments
+ * @argv: array of arguments
+ *
+ * Return: 0 (Success), 1 (Error)
  */
-
 int main(int argc, char *argv[])
 {
-	(void) argc;
+	int result, num1, num2;
 
-	if (argv[1] && argv[2])
+	if (argc < 3 || argc > 3)
 	{
-		printf("%d\n", atoi(argv[i]) * atoi(argv[2]));
-		return (0);
-	}
-	else
 		printf("Error\n");
+		return (1);
+	}
 
-	return (1);
+	num1 = _atoi(argv[1]);
+	num2 = _atoi(argv[2]);
+	result = num1 * num2;
+
+	printf("%d\n", result);
+
+	return (0);
 }
